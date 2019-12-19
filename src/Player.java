@@ -1,11 +1,13 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class Player {
-    static Random random = new Random();
-
+    Scanner n = new Scanner(System.in);
     int number;
-
     void guess(int bound) {
-        number = random.nextInt(bound);
+        System.out.println("Введите имя");
+        String name = n.toString();
+        System.out.println("Введите ваше число");
+        number = n.nextInt();
     }
 }

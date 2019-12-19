@@ -1,16 +1,21 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class GuessGame {
-    public static final int MAX = 10;
-    Player p1;
-    Player p2;
-    Player p3;
+    public final int MAX = 10;
+    Random random = new Random();
 
     void start () {
-        Random random = new Random();
-        p1 = new Player();
-        p2 = new Player();
-        p3 = new Player();
+        Scanner n = new Scanner(System.in);
+        System.out.print("Введите количество игроков");
+        int N = n.nextInt();
+         Player[] a;
+        a = new  Player[N];
+        for (int i = 0; i <N; i++) {
+            Player p = new Player();
+            a[i] = p;
+        }
+
 
         System.out.println("Я загадываю число от 0 до " + MAX);
         int number = random.nextInt(MAX);
