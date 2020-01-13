@@ -3,14 +3,17 @@ import java.util.Scanner;
 
 public class Player {
     Scanner n = new Scanner(System.in);
+    String name;
     int number;
-    void name(){
-        System.out.println("Введите имя");
-        String name = n.toString();
+
+    void askName() {
+        System.out.println(" введи имя");
+        name = n.nextLine();
     }
+
     void guess() {
 
-        System.out.println("Введите ваше число");
+        System.out.println(" введи число");
         number = n.nextInt();
     }
 }
