@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GuessGame {
-    public final int MAX = 10;
+    public final int MAX = 20;
     Random random = new Random();
 
     void start () {
@@ -10,8 +10,11 @@ public class GuessGame {
         Scanner n = new Scanner(System.in);
         System.out.println("Введите количество игроков");
         int N = n.nextInt();
-        System.out.println("Я загадываю число от 0 до " + MAX);
+        System.out.println("Я загадываю число от 1 до " + MAX);
         int number = random.nextInt(MAX);
+        if(number==0){
+            number+=1;
+        }
         System.out.println();
         Player[] a;
         a = new  Player[N];
